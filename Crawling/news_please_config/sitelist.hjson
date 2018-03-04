@@ -1,0 +1,60 @@
+# This is a HJSON-File, so comments and so on can be used! See https://hjson.org/
+# Furthermore this is first of all the actual config file, but as default just filled with examples.
+{
+  # Every URL has to be in an array-object in "base_urls".
+  # The same URL in combination with the same crawler may only appear once in this array.
+  "base_urls" : [
+    {
+      # CNN Travel
+      "url": "https://edition.cnn.com/travel/",
+      "crawler": "RecursiveCrawler",
+      "overwrite_heuristics": {
+        "meta_contains_article_keyword": true,
+        "og_type": false,
+        "linked_headlines": false,
+        "self_linked_headlines": false
+      },
+      "pass_heuristics_condition": "meta_contains_article_keyword"
+    },
+    {
+      # CNN Technology
+      "url": "https://edition.cnn.com/technology/",
+      "crawler": "RecursiveCrawler",
+      "overwrite_heuristics": {
+        "meta_contains_article_keyword": true,
+        "og_type": false,
+        "linked_headlines": false,
+        "self_linked_headlines": false
+      },
+      "pass_heuristics_condition": "meta_contains_article_keyword"
+    },
+    {
+      # CNN Style
+      "url": "https://edition.cnn.com/style/",
+      "crawler": "RecursiveCrawler",
+      "overwrite_heuristics": {
+        "meta_contains_article_keyword": true,
+        "og_type": false,
+        "linked_headlines": false,
+        "self_linked_headlines": false
+      },
+      "pass_heuristics_condition": "meta_contains_article_keyword"
+    },
+    {
+      # CNN Money
+      "url": "http://money.cnn.com/"
+    },
+    {
+      # CNN Entertainment
+      "url": "https://edition.cnn.com/entertainment/",
+      "crawler": "RecursiveCrawler",
+      "overwrite_heuristics": {
+        "meta_contains_article_keyword": true,
+        "og_type": false,
+        "linked_headlines": false,
+        "self_linked_headlines": false
+      },
+      "pass_heuristics_condition": "meta_contains_article_keyword"
+    }
+  ]
+}
